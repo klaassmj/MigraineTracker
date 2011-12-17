@@ -37,3 +37,39 @@ In particular the following are gems you will find a need for:
 * Cucumber/Rspec for testing
 * HAML/SASS for html and css generation
 * decent_exposure for declarative interfaces in controllers
+
+
+Deploying to heroku:
+====================
+
+The app is deployed to heroku at migrainetracker.herokuapp.com.
+
+The addons for backups, sendgrid email and logging have already been installed.
+
+Feel free to add any add-ons you feel will be useful.  If you need to install a paid add-on just drop me an email and I will add it (you can only add paid resources from the 'primary' account).
+
+You will need to add heroku as a git remote in order to deploy to heroku.
+
+This is my .git/config for this project:
+
+	[core]
+					repositoryformatversion = 0
+					filemode = true
+					bare = false
+					logallrefupdates = true
+					ignorecase = true
+	[remote "origin"]
+					url = git@github.com:elizabrocksoftware/Migraine-Tracking.git
+					fetch = +refs/heads/*:refs/remotes/origin/*
+	[remote "heroku"]
+					url = git@heroku.com:migrainetracker.git
+					fetch = +refs/heads/*:refs/remotes/heroku/*
+
+To deploy to heroku:
+
+1. `git push heroku master`
+2. `heroku run rake db:migrate`
+
+To look at the logs
+
+1. `heroku logs -f`
