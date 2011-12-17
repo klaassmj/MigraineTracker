@@ -1,8 +1,3 @@
-What's been done so far:
-=======================
-
-1. `rails new migrainetracker --skip-bundle -T -d postgresql`
-
 How to get started:
 =======================
 
