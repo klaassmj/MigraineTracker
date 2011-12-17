@@ -35,3 +35,5 @@ In particular the following are gems you will find a need for:
 * ActiveAdmin for no-work administrative backend
 * Devise for authentication
 * Cucumber/Rspec for testing
+* HAML/SASS for html and css generation
+* decent_exposure for declarative interfaces in controllers

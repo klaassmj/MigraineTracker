@@ -1,11 +1,14 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.3'
+# For activeadmin:
+# gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin.git'
+# gem "meta_search", '>= 1.1.0' #for activeadmin
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
+gem 'decent_exposure'
+gem 'haml-rails'
+gem 'jquery-rails'
 gem 'pg'
+gem 'rails', '3.1.3'
 
 
 # Gems used only for assets and not required
@@ -16,17 +19,24 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :development do
+  gem 'heroku'
+end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :test, :development do
+  gem 'capybara'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'email_spec'
+  gem 'fabrication'
+  gem 'fakeweb'
+  gem 'fuubar-cucumber'
+  gem 'rspec-rails'
+  gem 'ruby-debug19', require: 'ruby-debug'
+  gem 'shoulda'
+  gem 'timecop'
 
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
+  #for html2haml
+  gem 'hpricot'
+  gem 'ruby_parser'
+end
