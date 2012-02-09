@@ -52,6 +52,6 @@ module Migrainetracker
     config.assets.version = '1.0'
 
     # Making Heroku and Devise play nice
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = false 
   end
 end
