@@ -9,7 +9,7 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '3.1.3'
-
+gem 'therubyracer', :group => :development
 
 # Gems used only for assets and not required
 # in production environments by default.
