@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Time:
+  = @stress_report.time
+%p
+  %b Level:
+  = @stress_report.level
+%p
+  %b Cause:
+  = @stress_report.cause
+%p
+  %b Other:
+  = @stress_report.other
+%p
+  %b User:
+  = @stress_report.user_id
+
+= link_to 'Edit', edit_stress_report_path(@stress_report)
+\|
+= link_to 'Back', stress_reports_path

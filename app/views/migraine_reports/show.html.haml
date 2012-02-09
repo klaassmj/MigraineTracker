@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Start:
+  = @migraine_report.start
+%p
+  %b Duration:
+  = @migraine_report.duration
+%p
+  %b Severity:
+  = @migraine_report.severity
+%p
+  %b Location:
+  = @migraine_report.location
+%p
+  %b Other:
+  = @migraine_report.other
+%p
+  %b User:
+  = @migraine_report.user_id
+
+= link_to 'Edit', edit_migraine_report_path(@migraine_report)
+\|
+= link_to 'Back', migraine_reports_path

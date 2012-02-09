@@ -1,0 +1,29 @@
+%h1 Listing medication_reports
+
+%table
+  %tr
+    %th Medication
+    %th Amount
+    %th Units
+    %th Time
+    %th Other
+    %th User
+    %th
+    %th
+    %th
+
+  - @medication_reports.each do |medication_report|
+    %tr
+      %td= medication_report.medication
+      %td= medication_report.amount
+      %td= medication_report.units
+      %td= medication_report.time
+      %td= medication_report.other
+      %td= medication_report.user_id
+      %td= link_to 'Show', medication_report
+      %td= link_to 'Edit', edit_medication_report_path(medication_report)
+      %td= link_to 'Destroy', medication_report, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Medication report', new_medication_report_path

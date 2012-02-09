@@ -1,0 +1,25 @@
+= form_for @stress_report do |f|
+  -if @stress_report.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@stress_report.errors.count, "error")} prohibited this stress_report from being saved:"
+      %ul
+        - @stress_report.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :time
+    = f.datetime_select :time
+  .field
+    = f.label :level
+    = f.number_field :level
+  .field
+    = f.label :cause
+    = f.text_field :cause
+  .field
+    = f.label :other
+    = f.text_field :other
+  .field
+    = f.label :user_id
+    = f.number_field :user_id
+  .actions
+    = f.submit 'Save'

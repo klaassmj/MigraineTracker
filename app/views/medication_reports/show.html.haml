@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Medication:
+  = @medication_report.medication
+%p
+  %b Amount:
+  = @medication_report.amount
+%p
+  %b Units:
+  = @medication_report.units
+%p
+  %b Time:
+  = @medication_report.time
+%p
+  %b Other:
+  = @medication_report.other
+%p
+  %b User:
+  = @medication_report.user_id
+
+= link_to 'Edit', edit_medication_report_path(@medication_report)
+\|
+= link_to 'Back', medication_reports_path

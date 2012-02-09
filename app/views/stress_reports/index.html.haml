@@ -1,0 +1,27 @@
+%h1 Listing stress_reports
+
+%table
+  %tr
+    %th Time
+    %th Level
+    %th Cause
+    %th Other
+    %th User
+    %th
+    %th
+    %th
+
+  - @stress_reports.each do |stress_report|
+    %tr
+      %td= stress_report.time
+      %td= stress_report.level
+      %td= stress_report.cause
+      %td= stress_report.other
+      %td= stress_report.user_id
+      %td= link_to 'Show', stress_report
+      %td= link_to 'Edit', edit_stress_report_path(stress_report)
+      %td= link_to 'Destroy', stress_report, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Stress report', new_stress_report_path

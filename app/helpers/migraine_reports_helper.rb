@@ -1,0 +1,2 @@
+module MigraineReportsHelper
+end
