@@ -1,0 +1,29 @@
+<h1> Welcome to Version 1.1 of the Migraine Tracker </h1>
+
+<% if user_signed_in? %>
+Welcome, <%= current_user.email %>
+<p>
+View <%= link_to "Migraine Reports", migraine_reports_path %>
+</p>
+<p>
+View <%= link_to "Medication Reports", medication_reports_path %>
+</p>
+<p>
+View <%= link_to "Stress Reports", stress_reports_path %>
+</p>
+<p>
+View <%= link_to "Other Reports", other_reports_path %>
+</p>
+<p>
+<%= link_to "Create PDFs",pdfs_index_path %>
+</p>
+<p>
+<%= link_to "Sign Out", destroy_user_session_path, :method => :delete%>
+</p>
+<% else %>
+<%= link_to "Create Account", new_user_registration_path %>
+
+<%= link_to "Sign In", new_user_session_path %>
+
+<% end %>
+
