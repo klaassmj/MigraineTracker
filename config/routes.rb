@@ -1,4 +1,6 @@
 Migrainetracker::Application.routes.draw do
+  
+
   devise_for :users
 
   resources :stress_reports
