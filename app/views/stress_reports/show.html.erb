@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Time:</b>
+  <%= @stress_report.time %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%= @stress_report.level %>
+</p>
+
+<p>
+  <b>Cause:</b>
+  <%= @stress_report.cause %>
+</p>
+
+<p>
+  <b>Other:</b>
+  <%= @stress_report.other %>
+</p>
+
+
+<%= link_to 'Edit', edit_stress_report_path(@stress_report) %> |
+<%= link_to 'Back', stress_reports_path %>

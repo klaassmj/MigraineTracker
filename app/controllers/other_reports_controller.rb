@@ -1,12 +1,13 @@
 class OtherReportsController < ApplicationController
   # GET /other_reports
   # GET /other_reports.json
+  
   def index
     @other_reports = OtherReport.all
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @other_reports }
+      format.json { render :json => @other_reports }
     end
   end
 
@@ -14,10 +15,11 @@ class OtherReportsController < ApplicationController
   # GET /other_reports/1.json
   def show
     @other_report = OtherReport.find(params[:id])
-
+    
+  
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @other_report }
+      format.json { render :json => @other_report }
     end
   end
 
@@ -28,7 +30,7 @@ class OtherReportsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @other_report }
+      format.json { render :json => @other_report }
     end
   end
 
@@ -41,14 +43,14 @@ class OtherReportsController < ApplicationController
   # POST /other_reports.json
   def create
     @other_report = OtherReport.new(params[:other_report])
-
+    @other_report.user = current_user
     respond_to do |format|
       if @other_report.save
-        format.html { redirect_to @other_report, notice: 'Other report was successfully created.' }
-        format.json { render json: @other_report, status: :created, location: @other_report }
+        format.html { redirect_to @other_report, :notice => 'Other report was successfully created.' }
+        format.json { render :json => @other_report, :status => :created, :location => @other_report }
       else
-        format.html { render action: "new" }
-        format.json { render json: @other_report.errors, status: :unprocessable_entity }
+        format.html { render :action => "new" }
+        format.json { render :json => @other_report.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -60,11 +62,11 @@ class OtherReportsController < ApplicationController
 
     respond_to do |format|
       if @other_report.update_attributes(params[:other_report])
-        format.html { redirect_to @other_report, notice: 'Other report was successfully updated.' }
+        format.html { redirect_to @other_report, :notice => 'Other report was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @other_report.errors, status: :unprocessable_entity }
+        format.html { render :action => "edit" }
+        format.json { render :json => @other_report.errors, :status => :unprocessable_entity }
       end
     end
   end

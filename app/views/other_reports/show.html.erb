@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Time:</b>
+  <%= @other_report.time %>
+</p>
+
+<p>
+  <b>Details:</b>
+  <%= @other_report.details %>
+</p>
+
+
+<%= link_to 'Edit', edit_other_report_path(@other_report) %> |
+<%= link_to 'Back', other_reports_path %>

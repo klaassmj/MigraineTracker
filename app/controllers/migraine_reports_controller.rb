@@ -6,7 +6,7 @@ class MigraineReportsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @migraine_reports }
+      format.json { render :json => @migraine_reports }
     end
   end
 
@@ -17,7 +17,7 @@ class MigraineReportsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @migraine_report }
+      format.json { render :json => @migraine_report }
     end
   end
 
@@ -28,7 +28,7 @@ class MigraineReportsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @migraine_report }
+      format.json { render :json => @migraine_report }
     end
   end
 
@@ -41,14 +41,14 @@ class MigraineReportsController < ApplicationController
   # POST /migraine_reports.json
   def create
     @migraine_report = MigraineReport.new(params[:migraine_report])
-
+    @migraine_report.user = current_user
     respond_to do |format|
       if @migraine_report.save
-        format.html { redirect_to @migraine_report, notice: 'Migraine report was successfully created.' }
-        format.json { render json: @migraine_report, status: :created, location: @migraine_report }
+        format.html { redirect_to @migraine_report, :notice => 'Migraine report was successfully created.' }
+        format.json { render :json => @migraine_report, :status => :created, :location => @migraine_report }
       else
-        format.html { render action: "new" }
-        format.json { render json: @migraine_report.errors, status: :unprocessable_entity }
+        format.html { render :action => "new" }
+        format.json { render :json => @migraine_report.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -60,11 +60,11 @@ class MigraineReportsController < ApplicationController
 
     respond_to do |format|
       if @migraine_report.update_attributes(params[:migraine_report])
-        format.html { redirect_to @migraine_report, notice: 'Migraine report was successfully updated.' }
+        format.html { redirect_to @migraine_report, :notice => 'Migraine report was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @migraine_report.errors, status: :unprocessable_entity }
+        format.html { render :action => "edit" }
+        format.json { render :json => @migraine_report.errors, :status => :unprocessable_entity }
       end
     end
   end

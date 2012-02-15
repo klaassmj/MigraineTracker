@@ -1,0 +1,29 @@
+
+
+<h1>Listing other_reports</h1>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Details</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @other_reports.each do |other_report| %>
+<% if can? :read, other_report %>
+  <tr>
+    <td><%= other_report.time %></td>
+    <td><%= other_report.details %></td>
+    <td><%= link_to 'Show', other_report %></td>
+    <td><%= link_to 'Edit', edit_other_report_path(other_report) %></td>
+    <td><%= link_to 'Destroy', other_report, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Other report', new_other_report_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Time:</b>
+  <%= @medication_report.time %>
+</p>
+
+<p>
+  <b>Medication:</b>
+  <%= @medication_report.medication %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @medication_report.amount %>
+</p>
+
+<p>
+  <b>Units:</b>
+  <%= @medication_report.units %>
+</p>
+
+<p>
+  <b>Other:</b>
+  <%= @medication_report.other %>
+</p>
+
+
+<%= link_to 'Edit', edit_medication_report_path(@medication_report) %> |
+<%= link_to 'Back', medication_reports_path %>

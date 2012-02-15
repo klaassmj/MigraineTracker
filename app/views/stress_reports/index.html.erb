@@ -1,0 +1,31 @@
+<h1>Listing stress_reports</h1>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Level</th>
+    <th>Cause</th>
+    <th>Other</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stress_reports.each do |stress_report| %>
+<% if can? :read, stress_report %>
+  <tr>
+    <td><%= stress_report.time %></td>
+    <td><%= stress_report.level %></td>
+    <td><%= stress_report.cause %></td>
+    <td><%= stress_report.other %></td>
+    <td><%= link_to 'Show', stress_report %></td>
+    <td><%= link_to 'Edit', edit_stress_report_path(stress_report) %></td>
+    <td><%= link_to 'Destroy', stress_report, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stress report', new_stress_report_path %>

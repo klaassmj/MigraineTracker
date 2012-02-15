@@ -1,0 +1,27 @@
+<%= form_for(@other_report) do |f| %>
+  <% if @other_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@other_report.errors.count, "error") %> prohibited this other_report from being saved:</h2>
+
+      <ul>
+      <% @other_report.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% else %>
+    <% @other_report.user = current_user %>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.datetime_select :time %>
+  </div>
+  <div class="field">
+    <%= f.label :details %><br />
+    <%= f.text_field :details %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

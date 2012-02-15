@@ -6,7 +6,7 @@ class StressReportsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @stress_reports }
+      format.json { render :json => @stress_reports }
     end
   end
 
@@ -17,7 +17,7 @@ class StressReportsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @stress_report }
+      format.json { render :json => @stress_report }
     end
   end
 
@@ -28,7 +28,7 @@ class StressReportsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @stress_report }
+      format.json { render :json => @stress_report }
     end
   end
 
@@ -41,14 +41,14 @@ class StressReportsController < ApplicationController
   # POST /stress_reports.json
   def create
     @stress_report = StressReport.new(params[:stress_report])
-
+    @stress_report.user = current_user
     respond_to do |format|
       if @stress_report.save
-        format.html { redirect_to @stress_report, notice: 'Stress report was successfully created.' }
-        format.json { render json: @stress_report, status: :created, location: @stress_report }
+        format.html { redirect_to @stress_report, :notice => 'Stress report was successfully created.' }
+        format.json { render :json => @stress_report, :status => :created, :location => @stress_report }
       else
-        format.html { render action: "new" }
-        format.json { render json: @stress_report.errors, status: :unprocessable_entity }
+        format.html { render :action => "new" }
+        format.json { render :json => @stress_report.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -60,11 +60,11 @@ class StressReportsController < ApplicationController
 
     respond_to do |format|
       if @stress_report.update_attributes(params[:stress_report])
-        format.html { redirect_to @stress_report, notice: 'Stress report was successfully updated.' }
+        format.html { redirect_to @stress_report, :notice => 'Stress report was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @stress_report.errors, status: :unprocessable_entity }
+        format.html { render :action => "edit" }
+        format.json { render :json => @stress_report.errors, :status => :unprocessable_entity }
       end
     end
   end

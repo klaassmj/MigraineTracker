@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Start:</b>
+  <%= @migraine_report.start %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%= @migraine_report.duration %>
+</p>
+
+<p>
+  <b>Severity:</b>
+  <%= @migraine_report.severity %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @migraine_report.location %>
+</p>
+
+<p>
+  <b>Other:</b>
+  <%= @migraine_report.other %>
+</p>
+
+
+<%= link_to 'Edit', edit_migraine_report_path(@migraine_report) %> |
+<%= link_to 'Back', migraine_reports_path %>

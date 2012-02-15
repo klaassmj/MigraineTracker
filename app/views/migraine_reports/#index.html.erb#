@@ -1,0 +1,34 @@
+B
+<h1>Listing migraine_reports</h1>
+
+<table>
+  <tr>
+    <th>Start</th>
+    <th>Duration</th>
+    <th>Severity</th>
+    <th>Location</th>
+    <th>Other</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @migraine_reports.each do |migraine_report| %>
+<% if can? :read, migraine_report %>
+  <tr>
+    <td><%= migraine_report.start %></td>
+    <td><%= migraine_report.duration %></td>
+    <td><%= migraine_report.severity %></td>
+    <td><%= migraine_report.location %></td>
+    <td><%= migraine_report.other %></td>
+    <td><%= link_to 'Show', migraine_report %></td>
+    <td><%= link_to 'Edit', edit_migraine_report_path(migraine_report) %></td>
+    <td><%= link_to 'Destroy', migraine_report, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Migraine report', new_migraine_report_path %>

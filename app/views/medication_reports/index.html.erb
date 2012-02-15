@@ -1,0 +1,33 @@
+<h1>Listing medication_reports</h1>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Medication</th>
+    <th>Amount</th>
+    <th>Units</th>
+    <th>Other</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @medication_reports.each do |medication_report| %>
+<% if can? :read, medication_report %>
+  <tr>
+    <td><%= medication_report.time %></td>
+    <td><%= medication_report.medication %></td>
+    <td><%= medication_report.amount %></td>
+    <td><%= medication_report.units %></td>
+    <td><%= medication_report.other %></td>
+    <td><%= link_to 'Show', medication_report %></td>
+    <td><%= link_to 'Edit', edit_medication_report_path(medication_report) %></td>
+    <td><%= link_to 'Destroy', medication_report, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Medication report', new_medication_report_path %>

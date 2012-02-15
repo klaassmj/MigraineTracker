@@ -6,7 +6,7 @@ class MedicationReportsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @medication_reports }
+      format.json { render :json => @medication_reports }
     end
   end
 
@@ -17,7 +17,7 @@ class MedicationReportsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @medication_report }
+      format.json { render :json => @medication_report }
     end
   end
 
@@ -28,7 +28,7 @@ class MedicationReportsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @medication_report }
+      format.json { render :json => @medication_report }
     end
   end
 
@@ -41,14 +41,14 @@ class MedicationReportsController < ApplicationController
   # POST /medication_reports.json
   def create
     @medication_report = MedicationReport.new(params[:medication_report])
-
+    @medication_report.user = current_user
     respond_to do |format|
       if @medication_report.save
-        format.html { redirect_to @medication_report, notice: 'Medication report was successfully created.' }
-        format.json { render json: @medication_report, status: :created, location: @medication_report }
+        format.html { redirect_to @medication_report, :notice => 'Medication report was successfully created.' }
+        format.json { render :json => @medication_report, :status => :created, :location => @medication_report }
       else
-        format.html { render action: "new" }
-        format.json { render json: @medication_report.errors, status: :unprocessable_entity }
+        format.html { render :action => "new" }
+        format.json { render :json => @medication_report.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -60,11 +60,11 @@ class MedicationReportsController < ApplicationController
 
     respond_to do |format|
       if @medication_report.update_attributes(params[:medication_report])
-        format.html { redirect_to @medication_report, notice: 'Medication report was successfully updated.' }
+        format.html { redirect_to @medication_report, :notice => 'Medication report was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @medication_report.errors, status: :unprocessable_entity }
+        format.html { render :action => "edit" }
+        format.json { render :json => @medication_report.errors, :status => :unprocessable_entity }
       end
     end
   end
