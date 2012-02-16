@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Migraine2</title>
+  <title>Migraine Tracker</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -10,5 +10,8 @@
 
 <%= yield %>
 
+<p>
+<%= link_to "Home", root %>
+</p>
 </body>
 </html>
