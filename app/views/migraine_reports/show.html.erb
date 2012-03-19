@@ -1,7 +1,7 @@
-<% if can? :read, migraine_report %>
+
 
 <p id="notice"><%= notice %></p>
-
+<% if can? :read, migraine_report %>
 <p>
   <b>Start:</b>
   <%= @migraine_report.start %>
