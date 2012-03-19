@@ -1,3 +1,5 @@
+<% if can? :read, migraine_report %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -24,7 +26,11 @@
   <b>Other:</b>
   <%= @migraine_report.other %>
 </p>
-
-
+<% end %>
+<% else %>
+<p> 
+ <b>Access Denied</b> 
+</p> 
 <%= link_to 'Edit', edit_migraine_report_path(@migraine_report) %> |
 <%= link_to 'Back', migraine_reports_path %>
+
