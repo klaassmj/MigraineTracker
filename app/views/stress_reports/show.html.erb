@@ -1,3 +1,4 @@
+<% if can? :read, @stress_report %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -19,7 +20,7 @@
   <b>Other:</b>
   <%= @stress_report.other %>
 </p>
-
+<% end %>
 
 <%= link_to 'Edit', edit_stress_report_path(@stress_report) %> |
 <%= link_to 'Back', stress_reports_path %>
