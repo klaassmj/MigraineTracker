@@ -7,11 +7,11 @@ source 'http://rubygems.org'
 gem 'decent_exposure'
 gem 'haml-rails'
 gem 'jquery-rails'
-gem 'pg'
 gem 'rails', '3.1.3'
 gem 'therubyracer', :group => :development
 gem 'devise'
 gem 'cancan'
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -26,6 +26,7 @@ group :development do
 end
 
 group :test, :development do
+  gem 'factory_girl_rails'
   gem 'capybara'
   gem 'cucumber-rails'
   gem 'database_cleaner'
@@ -37,7 +38,7 @@ group :test, :development do
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'shoulda'
   gem 'timecop'
-
+  gem 'webrat'
   #for html2haml
   gem 'hpricot'
   gem 'ruby_parser'

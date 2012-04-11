@@ -1,5 +1,6 @@
 <h1> Welcome to Version 1.1 of the Migraine Tracker </h1>
 
+
 <% if user_signed_in? %>
 Welcome, <%= current_user.email %>
 <p>
@@ -13,9 +14,6 @@ View <%= link_to "Stress Reports", stress_reports_path %>
 </p>
 <p>
 View <%= link_to "Other Reports", other_reports_path %>
-</p>
-<p>
-View <%= link_to "Create PDF", eports_path %>
 </p>
 <p>
 <%= link_to "Sign Out", destroy_user_session_path, :method => :delete%>

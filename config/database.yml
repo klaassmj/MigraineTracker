@@ -39,7 +39,7 @@ development:
 test: &test
   adapter: postgresql
   encoding: unicode
-  database: migrainetracker_test
+  database: migrainetracker_development
   pool: 5
 
 cucumber:
