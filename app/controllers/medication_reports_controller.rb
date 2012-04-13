@@ -2,7 +2,7 @@ class MedicationReportsController < ApplicationController
   # GET /medication_reports
   # GET /medication_reports.json
   def index
-    @medication_reports = MedicationReport.all
+    @medication_reports = current_user.medication_reports
 
     respond_to do |format|
       format.html # index.html.erb

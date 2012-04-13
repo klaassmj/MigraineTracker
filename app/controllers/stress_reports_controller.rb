@@ -2,7 +2,7 @@ class StressReportsController < ApplicationController
   # GET /stress_reports
   # GET /stress_reports.json
   def index
-    @stress_reports = StressReport.all
+    @stress_reports = current_user.stress_reports
 
     respond_to do |format|
       format.html # index.html.erb

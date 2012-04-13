@@ -1,0 +1,93 @@
+<h1> PDF report for user <%=@name%> </h1>
+<% if @migraines.length > 0 %>
+<h2>Migraine Reports:</h2>
+<table>
+  <tr>
+    <th>Start</th>
+    <th>Duration</th>
+    <th>Severity</th>
+    <th>Location</th>
+    <th>Other</th>
+  </tr>
+
+<% @migraines.each do |migraine_report| %>
+<% if can? :read, migraine_report %>
+  <tr>
+    <td><%= migraine_report.start %></td>
+    <td><%= migraine_report.duration %></td>
+    <td><%= migraine_report.severity %></td>
+    <td><%= migraine_report.location %></td>
+    <td><%= migraine_report.other %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+<% end %>
+
+
+<% if @stress.length > 0 %>
+<h2>Stress Reports:</h2>
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Level</th>
+    <th>Cause</th>
+    <th>Other</th>
+  </tr>
+
+<% @stress.each do |stress_report| %>
+<% if can? :read, stress_report %>
+  <tr>
+    <td><%= stress_report.time %></td>
+    <td><%= stress_report.level %></td>
+    <td><%= stress_report.cause %></td>
+    <td><%= stress_report.other %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+<% end %>
+
+<% if @medication.length > 0 %>
+<h2>Medication Reports:</h2>
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Medication</th>
+    <th>Amount</th>
+    <th>Units</th>
+    <th>Other</th>
+  </tr>
+
+<% @medication.each do |medication_report| %>
+<% if can? :read, medication_report %>
+  <tr>
+    <td><%= medication_report.time %></td>
+    <td><%= medication_report.medication %></td>
+    <td><%= medication_report.amount %></td>
+    <td><%= medication_report.units %></td>
+    <td><%= medication_report.other %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+<% end %>
+
+<% if @other.length>0 %>
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Details</th>
+  </tr>
+
+<% @other.each do |other_report| %>
+<% if can? :read, other_report %>
+  <tr>
+    <td><%= other_report.time %></td>
+    <td><%= other_report.details %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+<% end %>
+

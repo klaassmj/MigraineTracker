@@ -3,7 +3,7 @@ class OtherReportsController < ApplicationController
   # GET /other_reports.json
   
   def index
-    @other_reports = OtherReport.all
+    @other_reports = current_user.other_reports
 
     respond_to do |format|
       format.html # index.html.erb

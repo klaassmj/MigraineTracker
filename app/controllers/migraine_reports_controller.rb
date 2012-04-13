@@ -2,7 +2,7 @@ class MigraineReportsController < ApplicationController
   # GET /migraine_reports
   # GET /migraine_reports.json
   def index
-    @migraine_reports = MigraineReport.all
+    @migraine_reports = current_user.migraine_reports
 
     respond_to do |format|
       format.html # index.html.erb
