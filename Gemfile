@@ -12,6 +12,7 @@ gem 'therubyracer', :group => :development
 gem 'devise'
 gem 'cancan'
 gem 'pg'
+gem 'doc_raptor'
 
 # Gems used only for assets and not required
 # in production environments by default.

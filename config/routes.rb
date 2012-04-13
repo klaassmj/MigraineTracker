@@ -1,6 +1,8 @@
 Migrainetracker::Application.routes.draw do
   
 
+  get "pdf/index"
+
   devise_for :users
 
   resources :stress_reports
