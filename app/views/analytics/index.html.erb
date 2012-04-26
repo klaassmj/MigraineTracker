@@ -37,7 +37,9 @@
 
 <% if current_user != nil %>
 <div id="chart_div"></div>
-<h1> The time of day that you have the most migraines is: <%=@max%> </h1>
+<h1> The time of day that you have the most migraines is: <%=(@max>12)?@max-12:@max%> <%=(@max>12)?"pm":"am"%> </h1>
+
+<p> This is  a chart that displays the most common time of day that you have reported migraines. Other graph options coming soon. </p>
 <% else %>
 <h1> Please log in to view analytics </h1>
 <% end %>
