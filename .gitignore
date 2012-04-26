@@ -16,3 +16,4 @@
 
 # Ignore all files in RAILS_ENV=test
 /RAILS_ENV=test/*
+

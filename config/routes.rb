@@ -1,6 +1,8 @@
 Migrainetracker::Application.routes.draw do
   
 
+  get "analytics/index"
+
   get "pdf/index"
 
   devise_for :users
