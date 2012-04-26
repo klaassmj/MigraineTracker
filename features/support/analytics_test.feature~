@@ -1,0 +1,10 @@
+Feature: View basic analyics of reports 
+  In order to track migraines and correlations 
+  As a frequent migraine sufferer
+  I want to look for trends
+
+  
+  Scenario: Not logged on and trying to view 
+    Given I am not logged in
+    When I go to view Analytics
+    Then I should see "Please log in to view analytics"
