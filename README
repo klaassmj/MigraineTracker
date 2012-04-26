@@ -1,0 +1,55 @@
+README: 
+
+1.  DATABASE SETUP:  Database setup is taken care of automatically by Heroku.  However if any changes are made to the database, such as adding tables, one must re-rake the database in order to include the changes.
+
+
+
+2.  MIGRAINE REPORTS
+
+Reports dealing with Migraine suffering.  Records data on the time of the migraine, duration, severity, location, and additional notes.
+ 
+migraine_reports_controller.rb:  Deals with the creating, updating, destroying, and the indexing of migraine reports.  
+
+migraine_report.rb: Assigns migraine report to user.
+
+3.  MEDICATION REPORTS: 
+
+Reports dealing with medication taken by the user.  Records the name, amount (and units of amount), and the time that the medication as taken, as well as additional notes.   
+
+medication_reports_controller.rb:  Deals with creating, updating, destroying, and the indexing of medication reports. 
+
+medication_report.rb: Assigns medication report to user.  
+
+4. STRESS REPORTS 
+
+Reports dealing with stressors that the user has encoutered recently.  Records stress level, the cause, the time, and additional notes.  
+
+stress_reports_controller.rb:  Deals with the creating, updating, destroying, and the indexing of stress reports. 
+
+stress_report.rb: Assigns stress report to user.     
+
+
+5. OTHER REPORTS
+
+Reports dealing with any details not covered by the rest of the report types.  Records time and notes.  
+
+other_reports_controller.rb: Deals with the creating, updating, destroying, and the indexing of other reports.  
+
+other_report.rb: Assigns other report to user. 
+
+
+6. OTHER MODELS AND CONTROLLER
+
+
+analytics_controller.rb: Keeps track of the seperate 24 hours in the times hash, for the most 'migraines suffered at this hour' functionality.    
+
+
+pdf_controller.rb: Deals with pdf creation.  Is responsible for dealing with the DocRaptor generation of PDFs.  
+
+
+ability.rb: Is responsible for the cancan definition of user.  Gives the user the ability to view and edit reports that belong to them. 
+
+user.rb: Where the user attributes are describes, including devise items, and what reports the user can have.  
+
+  
+
