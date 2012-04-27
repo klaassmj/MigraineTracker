@@ -1,6 +1,6 @@
 README: 
 
-1.  DATABASE SETUP:  Database setup is taken care of automatically by Heroku.  However if any changes are made to the database, such as adding tables, one must re-rake the database in order to include the changes.
+1.  DATABASE SETUP:  Database setup is taken care of automatically by Heroku.  However if any changes are made to the database, such as adding tables, one must re-rake the database in order to include the changes. The database is a postgresql hosted at Heroku. 
 
 
 
