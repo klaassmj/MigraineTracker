@@ -1,3 +1,4 @@
+<%if current_user != nil %>
 <h1> PDF report for user <%=@name%> </h1>
 <% if @migraines.length > 0 %>
 <h2>Migraine Reports:</h2>
@@ -91,4 +92,4 @@
 <% end %>
 </table>
 <% end %>
-
+<%end%>

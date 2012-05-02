@@ -1,13 +1,15 @@
 class PdfController < ApplicationController
   def index
-    @migraines = current_user.migraine_reports
-    @stress = current_user.stress_reports
-    @medication = current_user.medication_reports
-    @other = current_user.other_reports
-    @name = current_user.email
-    respond_to do |format|
-      format.html
-      format.pdf { doc_raptor_send }
+    if current_user != nil
+    	@migraines = current_user.migraine_reports
+    	@stress = current_user.stress_reports
+    	@medication = current_user.medication_reports
+    	@other = current_user.other_reports
+    	@name = current_user.email
+    		respond_to do |format|
+     		 format.html
+      		format.pdf { doc_raptor_send }
+     end
     end
 
     
