@@ -11,6 +11,8 @@ def path_to(page_name)
     pdf_index_path
   when /^view Analytics$/
     analytics_index_path
+  when /^View Migraine Time Analytics$/
+    view_migraine_time_analytics_path
   else
     raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
       "Now, go and add a mapping in #{__FILE__}"
