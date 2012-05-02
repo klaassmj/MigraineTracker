@@ -1,5 +1,7 @@
+<%if current_user != nil%>
 <h1>New stress_report</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', stress_reports_path %>
+<%end%>

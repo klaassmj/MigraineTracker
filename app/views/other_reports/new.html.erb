@@ -1,5 +1,7 @@
+<%if current_user != nil %>
 <h1>New other_report</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', other_reports_path %>
+<%end%>
