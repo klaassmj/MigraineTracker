@@ -2,6 +2,8 @@ Migrainetracker::Application.routes.draw do
   
 
   get "analytics/index"
+ 
+  get "analytics/viewMigraineTimeAnalytics"
 
   get "pdf/index"
 

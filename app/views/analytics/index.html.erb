@@ -1,45 +1,5 @@
-<!--Load the AJAX API-->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-
-      // Load the Visualization API and the piechart package.
-      google.load('visualization', '1.0', {'packages':['corechart']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Time');
-        data.addColumn('number', 'Number of Reports');
-        data.addRows([         
-          ['12 am', <%= @times[0] %>], ['1 am', <%= @times[1] %>], ['2 am',<%= @times[2] %>], ['3 am',<%= @times[3] %>], ['4 am',<%= @times[4] %>],
-          ['5 am',<%= @times[5] %>],   ['6 am',<%= @times[6] %>],  ['7 am',<%= @times[7] %>], ['8 am',<%= @times[8] %>], ['9 am',<%= @times[9] %>],
-          ['10 am',<%= @times[10] %>], ['11 am',<%= @times[11] %>],['12 pm',<%= @times[12] %>], ['1 pm',<%= @times[13] %>],['2 pm',<%= @times[14] %>],
-          ['3 pm',<%= @times[15] %>],  ['4 pm',<%= @times[16] %>], ['5 pm',<%= @times[17] %>],  ['6 pm',<%= @times[18] %>],['7 pm',<%= @times[19] %>],
-          ['8 pm',<%= @times[20] %>],  ['9 pm',<%= @times[21] %>], ['10 pm', <%= @times[22] %>],['11 pm' ,<%= @times[23] %>]  ]);
-
-        // Set chart options
-        var options = {'title':'Migraine Reports submitted sorted by time',
-                       'width':400,
-                       'height':300};
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
-
 <% if current_user != nil %>
-<div id="chart_div"></div>
-<h1> The time of day that you have the most migraines is: <%=(@max>12)?@max-12:@max%> <%=(@max>12)?"pm":"am"%> </h1>
-
-<p> This is  a chart that displays the most common time of day that you have reported migraines. Other graph options coming soon. </p>
+<%= link_to "Basic Time Analytics", analytics_viewMigraineTimeAnalytics_path %>
 <% else %>
 <h1> Please log in to view analytics </h1>
 <% end %>
