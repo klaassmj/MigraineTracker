@@ -34,7 +34,7 @@
   end
 
 
-  def viewMigraingeDayAnalytics
+  def viewMigraineDayAnalytics
     daysOfWeek = {0 => "Sunday",1 => "Monday",2 => "Tuesday",3 => "Wednesday",4 => "Thursday",5 => "Friday",
       6 => "Saturday"}
     days = {"Sunday" => 0,"Monday" => 0,"Tuesday" => 0,"Wednesday" => 0,"Thursday" => 0,"Friday" => 0,"Saturday" => 0}
@@ -58,4 +58,38 @@
        format.html
     end
   end
+
+
+def viewMigraineMonthAnalytics
+    monthOfYear = {1 => "January",2 => "Febuary",3 => "March",4 => "April",5 => "May",6 => "June",
+      7 => "July", 8 => "Agust", 9 => "September", 10 => "October", 11 => "November", 12 => "December"}
+    months = {"January" => 0,"Febuary" => 0,"Mach" => 0,"April" => 0,"May" => 0,"June" => 0,"July" => 0, "August" => 0, "September" => 0, "October" => 0,
+	"Novmeber" => 0, "December" => 0}
+    if current_user!=nil 
+      migraine_reports = current_user.migraine_reports
+      migraine_reports.each do |report|
+       months[monthOfYear[report.start.month]] += 1
+      end
+    end
+    max = 0
+    maxMonth = ""
+    months.each do |month, count| 
+      if count > max
+        max = count
+        maxMonth = month
+      end
+    end
+    @months = months
+    @maxMonth = maxMonth
+    
+    respond_to do |format|
+       format.html
+    end
+  end
+
+
+
+
+
+
 end

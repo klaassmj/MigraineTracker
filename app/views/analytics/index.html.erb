@@ -1,6 +1,7 @@
 <% if current_user != nil %>
-<%= link_to "Basic Time Analytics", analytics_viewMigraineTimeAnalytics_path %>
-<%= link_to "Basic Day Analytics", analytics_viewMigraineDayAnalytics_path %>
+<p><%= link_to "Basic Time Analytics", analytics_viewMigraineTimeAnalytics_path %></p>
+<p><%= link_to "Basic Day Analytics", analytics_viewMigraineDayAnalytics_path %></p>
+<p><%= link_to "Basic Month Analytics", analytics_viewMigraineMonthAnalytics_path %></p>
 <% else %>
 <h1> Please log in to view analytics </h1>
 <% end %>
