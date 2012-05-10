@@ -34,7 +34,9 @@
     </script>
 
 <% if current_user != nil %>
-<%= @months %>
+<% @months.each do |m,v| %>
+<p> <%= m %> , <%= v %> </p>
+<% end %>
 <div id="chart_div"></div>
 <% else %>
 <h1> Please log in to view analytics </h1>

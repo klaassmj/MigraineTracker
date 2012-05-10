@@ -61,10 +61,12 @@
 
 
 def viewMigraineMonthAnalytics
-    monthOfYear = {1 => "January",2 => "Febuary",3 => "March",4 => "April",5 => "May",6 => "June",
-      7 => "July", 8 => "Agust", 9 => "September", 10 => "October", 11 => "November", 12 => "December"}
-    months = {"January" => 0,"Febuary" => 0,"Mach" => 0,"April" => 0,"May" => 0,"June" => 0,"July" => 0, "August" => 0, "September" => 0, "October" => 0,
-	"Novmeber" => 0, "December" => 0}
+    monthOfYear = {1 => "January",2 => "Febuary",3 => "March",4 => "April",
+                   5 => "May",6 => "June", 7 => "July", 8 => "Agust", 
+                   9 => "September", 10 => "October", 11 => "November", 12 => "December"}
+    months = {"January" => 0,"Febuary" => 0,"March" => 0,"April" => 0,
+              "May" => 0,"June" => 0,"July" => 0, "August" => 0,
+              "September" => 0, "October" => 0,	"November" => 0, "December" => 0}
     if current_user!=nil 
       migraine_reports = current_user.migraine_reports
       migraine_reports.each do |report|
