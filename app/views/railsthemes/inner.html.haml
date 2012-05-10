@@ -1,0 +1,37 @@
+= content_for :sidebar do
+  %h2.page-title Page Name
+  %ul.nav-inside
+    %li
+      %a.active{:href => "#"} Sub Page One
+    %li
+      %a{:href => "#"} Sub Page Two
+    %li
+      %a{:href => "#"} Sub Page Three
+%h1 Heading 1 (Helvetica/Arial Bold 30)
+%h2 Heading 2 (Helvetica/Arial Bold 24)
+%h3 Heading 3 (Georgia Italic 18)
+%h4 Heading 4 (Helvetica/Arial Bold 18)
+%h5 Heading 5 (Georgia Bold 18)
+%h6 Heading 6 (Georgia Bold 18)
+%p
+  Paragraph text should be like this. The line spacing should be like this. The color should be like this. And all of the good stuff should be like this. This is just filler text. This sentence shows regular,
+  = succeed "," do
+    %strong bold
+  %strong
+    %em bold italics
+  and
+  = succeed "." do
+    %em italics
+%p
+  Paragraph text should be like this. The line spacing should be like this. The color should be like this. And all of the good stuff should be like this. This is just filler text.
+  
+  Numbered List.
+  %ol
+    %li Number one
+    %li Number two
+    %li Number three
+  Bulleted List
+  %ul
+    %li Bullet one
+    %li Bullet two
+    %li Bullet three

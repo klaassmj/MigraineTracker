@@ -1,0 +1,552 @@
+@media handheld, only screen and (max-width: 767px) {
+#logo {position:relative !important;margin: -20px auto 0;}
+#header .five.columns {width:100%;margin-left:0;margin-top:-20px;}
+.nav-bar {text-align:center;}
+#header .button-custom {float:none !important;}
+#header .four.columns {margin-bottom:25px !important;}
+#main-left {margin-top:0 !important;}
+.gray-box {width:95%;margin-left:0 !important;}
+}
+
+
+
+/* ---------------------------------------------------------------GENERAL */
+
+html,body {background:#ebebeb;}
+
+a {color:#6e7e00;}
+a:hover {
+  color:#6e7e00;
+  text-decoration:underline;
+}
+
+ul {
+  list-style: disc inside none;
+  padding-left: 20px;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+}
+
+::selection {
+  background: #000;color:#fff; /* Safari */
+}
+::-moz-selection {
+  background: #000;color:#fff; /* Firefox */
+}
+
+h1 {color:#43531e;font-size:30px;font-family:helvetica,arial,sans-serif;font-weight:bold;}
+h2 {color:#707070;font-size:24px;font-family:helvetica,arial,sans-serif;font-weight:bold;}
+h3 {color:#677718;font-family:georgia,serif;font-style:italic;}
+h4 {color:#959595;font-family:helvetica,arial,sans-serif;font-weight:bold;}
+h5 {color:#c0d53b;font-family:georgia,serif;font-weight:bold;}
+h6 {color:#252525;font-family:georgia,serif;font-weight:bold;}
+
+h3,h4,h5,h6 {font-size:18px;}
+
+h1,h2,h3,h4,h5,h6 {padding:10px 0;}
+
+/* ---------------------------------------------------------------HEADER */
+
+#header {
+  background:#598527 url(image-path('bg-hdr.png')) repeat-x bottom left;
+  padding-top:15px;
+  position:relative;
+}
+
+#header h1 {
+  font-size:220%;
+  color:#43531e;
+  font-family:georgia,serif;
+}
+
+#header .five.columns {
+  width:38%
+}
+
+#header .offset-by-three {margin-left:32.5%;}
+
+#header .four.columns {
+  width:none;
+  margin-bottom:15px;
+  width:20.37%;
+}
+
+#header .row {position:relative;}
+
+#logo {
+  background:transparent url(image-path('bg-logo.png')) no-repeat top center;
+  width:248px !important;
+  height:171px;
+  top:-20px;
+  left:0;
+  text-align:center;
+  padding-top:30px;
+  position:absolute;
+  z-index:999;
+}
+
+ul.nav-bar {
+  background:transparent;
+  border:none;
+  margin-top:0;
+  border-top:1px solid #000;
+  border-bottom:1px solid #000;
+  padding-left:10px !important;
+
+}
+
+ul.nav-bar > li {
+  border:none;
+  padding:0 20px 0 0;
+  margin-left:0;
+  display:inline-block !important;
+}
+
+.nav-bar a {
+  color:#fff !important;
+  font-size:110%;
+  display:block;
+}
+
+.nav-bar a:hover {
+  color:#c1d43a !important;
+  text-decoration:none;
+}
+
+#header .button-custom {
+  border:1px solid #444;
+  float:right;
+}
+
+button, .button-custom,input[type="submit"]  {
+  cursor:pointer;
+  padding:10px;
+  color:#fff;
+  font-size:120%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  background:#afc800 url(image-path('button-gradient.png')) repeat-x top left;
+  white-space:nowrap;
+}
+
+button:hover, .button-custom:hover,input[type="submit"]:hover {
+  color:#fff;
+  background:orange url(image-path('button-gradient.png')) repeat-x top left;
+  text-decoration:none;
+}
+
+.button-custom span {
+  padding-right:40px;
+  background:url(image-path('button-arrow.png')) no-repeat right center;
+}
+
+/* ---------------------------------------------------------------MAIN SECTION */
+
+#main {
+  background:#fff;
+  padding-top:2%;
+}
+
+#main-left {margin-top:8%;}
+
+#main-left p {
+  font-size: 1.4rem;
+  line-height:2;
+}
+
+.eye-catcher {
+  font-size:250% !important;
+  font-family:georgia,serif;
+  color:#43531e;
+  font-style:italic;
+  margin-bottom:15px;
+  padding-bottom:5px;
+  border-bottom:1px solid #ebebeb;
+}
+
+.gray-box {
+  margin-top:20px;
+  color:#000;
+  background:#ebebeb;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  min-height:140px;
+  margin-left:2%;
+}
+
+span.calendar, span.meet-peep {
+  font-weight:bold;
+  font-family:georgia,serif;
+  margin-top:20px !important;
+  margin:0 auto;
+  display:block;
+  width:60%;
+  padding-bottom:60px;
+}
+
+span.calendar {
+  padding-left:55px;
+  background:transparent url(image-path('calendar.png')) no-repeat left top;
+}
+
+span.meet-peep {
+  padding-left:70px;
+  background:transparent url(image-path('meet-peep.png')) no-repeat left top;
+}
+
+.gray-box .button-custom {
+  border:none;
+  bottom: 0;
+  font-size: 160%;
+  font-weight: normal;
+  position: absolute;
+  text-align: right;
+  right:0;
+  left:0;
+}
+
+h2.hm-article-title, h3.side-title:first-child {
+  font-family:georgia,serif;
+  margin-bottom:0;
+  margin-top:15px;
+  padding:13px 0px 13px 20px;
+  color:#43531e;
+  font-size:300% !important;
+  font-weight:normal;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
+  background:#d7d7d7 url(image-path('bg-title.png')) repeat-x top left;
+}
+
+.comment-triangle {
+  border:0 !important;
+  display:block;
+  margin-left:25px;
+  margin-bottom:10px;
+}
+
+#sidebar .comment-triangle {margin-left:0px;}
+
+#hm-article-entry  {
+  background:#f7f7f7;
+  -moz-border-radius-topleft: 0px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
+  margin-bottom:30px;
+  float:left;
+  padding:0 20px 20px;
+}
+
+.hm-article-entry p {
+  line-height:1.4 !important;
+}
+
+.hm-article-entry li {list-style-type:disc;margin-left:15px;}
+
+.entry-img {
+  float:right;
+  margin:10px;
+  border:10px solid #d7d7d7;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.tweet {
+  color:#000;
+  font-size:11px;
+}
+
+.tweet-date {
+  color:#888;
+  font-size:9px;
+}
+
+/* INSIDE PAGE */
+
+.content {margin-bottom:40px;}
+.content a {text-decoration:underline;}
+
+/* ---------------------------------------------------------------SIDEBAR */
+
+#sidebar {margin-bottom:25px;}
+
+h3.side-title, h3.side-title:first-child {
+  font-size:200% !important;
+  font-style:italic;
+  margin-top:0;
+}
+
+.address .button-custom {
+  display:inline-block;
+  margin-bottom:25px;
+}
+
+.locations {
+  padding-left:35px;
+  background:url(image-path('locations.png')) no-repeat top left;
+  padding-bottom:10px;
+  margin-left:-5px;
+}
+
+.tweets {
+  padding-left:40px;
+  background:url(image-path('tweets.png')) no-repeat top left;
+  padding-bottom:10px;
+  margin-left:-5px;
+}
+
+h3.side-title {
+  margin-bottom:0;
+  padding:13px 0px;
+  padding-left:20px;
+  background:#d7d7d7 url(image-path('bg-title.png')) repeat-x top left;
+}
+
+#sidebar h3 {
+  font-family:georgia,serif;
+  color:#43531e;
+  font-weight:normal;
+  font-style:italic;
+}
+
+#sidebar .comment-triangle {
+  border:0 !important;
+  position:absolute;
+  top: 0px;
+  left:20px;
+}
+
+.side-entry {
+  position:relative;
+  background:#f7f7f7;
+  margin-top:0;
+  padding:20px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+/* ---------------------------------------------------------------INSIDE NAV */
+
+.inside {padding-top:70px;}
+
+h2.page-title {
+  font-family:georgia;
+  font-size:200%;
+  font-weight:normal;
+}
+
+ul.nav-inside {
+  border-top:1px solid #ebebeb;
+  border-bottom:1px solid #ebebeb;
+  color:#677718;
+  font-size:130%;
+  font-family:georgia,serif;
+  padding:20px;
+  list-style:none;
+}
+
+ul.nav-inside a {
+  padding-left:10px;
+}
+
+ul.nav-inside a:hover {
+  text-decoration:underline;
+}
+
+.active {
+  background:url(image-path('triangle-black.png')) no-repeat center left;
+}
+
+
+/* ----------------------------DOWNLOAD BUTTON */
+
+h3.title-download {margin:20px 0 15px;padding-left:20px;}
+
+.button-download {
+  background:#e1e1e1;
+  padding:10px;
+  color:#707070;
+  font-size:120%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  white-space:nowrap;
+  display:inline-block;
+  margin-bottom:10px;
+  margin-left:20px;
+}
+
+.button-download:hover {
+  color:#fff;
+  background-color:#9eaf2d;
+  text-decoration:none;
+}
+
+.button-download span {
+  padding-left:30px;
+  background:url(image-path('adobe-acrobat.png')) no-repeat left center;
+}
+
+/* ---------------------------------------------------------------FOOTER */
+
+#footer {
+  background:#eaeaea;
+  padding-bottom:40px;
+}
+
+#footer .container {
+  padding-left:0;
+  padding-right:0;
+}
+
+#footer .columns  {
+  border-left:1px solid #b7b7b7;
+  margin-top:20px;
+  padding-left:20px;
+  min-height:160px;
+}
+
+#footer h4 {
+  color:#43531e;
+}
+
+#footer .two.columns .button-custom {
+  float:left;
+}
+
+#footer ul.nav-bar {
+  border:0;
+  margin-bottom:0;
+  height:none !important;
+}
+
+#footer ul.nav-bar li {line-height:25px !important;}
+
+#footer ul.nav-bar, #footer .button-custom, #footer .copyright {float:right;}
+
+#footer ul.nav-bar a {
+  color:#464646 !important;
+}
+
+#footer ul.nav-bar a:hover {
+  text-decoration:underline;
+}
+
+#footer .button-custom {
+  margin:10px 0 30px;
+  color:#fff;
+}
+
+.copyright {
+  clear:both;
+}
+
+
+/* SNIPPET STYLING thru end of stylesheet */
+
+table tbody tr td, table th {border-right:1px solid #efefef;}
+th {
+    border: medium none;
+    color: #333;
+    padding: 9px 10px;
+    vertical-align: top;
+}
+
+.field select {display:inline-block;}
+
+.form-inputs label {margin-bottom:9px;}
+
+form br {display:none;}
+
+div.form-actions {
+    background-color: transparent;
+    border-top: 0px solid #ddd;
+}
+
+div.form-inputs select {width:100px;vertical-align:bottom;}
+div.form-inputs .input {border:0px !important;}
+
+/* -----------------------------------------
+   Standard Forms
+----------------------------------------- */
+
+form { margin: 0 0 18px; }
+form label, .formtastic .label { display: block; font-size: 15px; line-height: 18px; cursor: pointer; margin-bottom: 3px; }
+
+input, textarea { border-right: 1px solid #bbb; border-bottom: 1px solid #bbb; }
+input, textarea, select { display: block; margin-bottom: 9px; }
+label + input, label + textarea, label + select, label + div.dropdown, select + div.dropdown { margin-top: -9px; }
+
+/* Text input and textarea font and padding */
+input, textarea { font-size: 13px; padding: 4px 3px 2px; background: #fff; }
+input:focus, textarea:focus { outline: none !important; }
+input.oversize, textarea.oversize { font-size: 18px !important; padding: 4px 5px !important; }
+input:focus, textarea:focus { background: #f9f9f9; }
+
+/* Text input and textarea, disabled */
+input[disabled], textarea[disabled] { background-color: #ddd; }
+
+/* Inlined Label Style */
+input.placeholder, textarea.placeholder { color: #888; }
+
+/* Text input and textarea sizes */
+input, textarea { box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+input.small, textarea.small { width: 134px; }
+input.medium, textarea.medium { width: 254px; }
+input.large, textarea.large { width: 434px; }
+input.expand, textarea.expand { width: 100%; }
+
+/* Fieldsets */
+form fieldset { padding: 9px 9px 2px 9px; border: solid 1px #ddd; margin: 18px 0; }
+
+/* Inlined Radio & Checkbox */
+ input[type=radio], div input[type=checkbox] { display: inline; width:auto; margin-bottom:0; }
+
+/* Errors */
+.error input, input.red { border-color: #C00000; background-color: rgba(255,0,0,0.15); }
+.error label, label.red { color: #C00000; }
+.error small, small.error { margin-top: -6px; display: block; margin-bottom: 9px; font-size: 11px; color: #C00000; width: 254px; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+
+.small + small.error { width: 134px; }
+.medium + small.error { width: 254px; }
+.large + small.error { width: 434px; }
+.expand + small.error { width: 100%; }
+
+.small.oversize + small.error { width: 144px; }
+.medium.oversize + small.error { width: 264px; }
+.large.oversize + small.error { width: 444px; }
+.expand.oversize + small.error { width: 100%; }
+
+/* -----------------------------------------
+   NICER Forms
+----------------------------------------- */
+
+form div {padding-bottom:15px;}
+
+form div i  {color:#999;font-size:11px;}
+
+form div input, form input, form textarea,form .input { border: solid 1px #bbb; border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; }
+form div input, form input, form textarea { font-size: 13px; padding: 6px 3px 4px; outline: none !important; background: url(image-path('misc/input-bg.png')) #fff; }
+form div input:focus, form input:focus, form textarea:focus { background-color: #f9f9f9; }
+
+/* Text input and textarea, disabled */
+form div input[disabled], form input[disabled], form textarea[disabled] { background-color: #ddd; }
+
+form fieldset { border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; }
+
+form div input[type=radio], form div input[type=checkbox] { display: inline; width:auto; margin-bottom:0; }

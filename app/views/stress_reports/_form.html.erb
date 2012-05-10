@@ -19,7 +19,7 @@
   </div>
   <div class="field">
     <%= f.label :level %><br />
-    <%= f.number_field :level %>
+    <%= f.number_field :level, :min => 0 %>
   </div>
   <div class="field">
     <%= f.label :cause %><br />

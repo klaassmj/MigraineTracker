@@ -1,0 +1,91 @@
+= content_for :sidebar do
+  .twelve.columns
+    %h3.side-title
+      %span.locations Locations
+    .side-entry
+      = image_tag "comment-triangle.png", :class => "comment-triangle", :alt => ""
+      .address
+        %h4 Location One
+        %p
+          123 Street Drive
+          %br/
+          City, ST 12345
+          %br/
+          Phone 123.456.7890
+          %br/
+          Fax 123.456.7890
+        %a.button-custom{:href => "#"} Map It
+      .address
+        %h4 Location Two
+        %p
+          123 Street Drive
+          %br/
+          City, ST 12345
+          %br/
+          Phone 123.456.7890
+          %br/
+          Fax 123.456.7890
+        %p
+          %a{:href => "mailto:info@company.com"} info@company.com
+          = succeed "123.456.7890" do
+            %br/
+        %a.button-custom{:href => "#"} Map It
+    %h3.side-title
+      %span.tweets Recent Tweets
+    .side-entry
+      = image_tag "comment-triangle.png", :class => "comment-triangle", :alt => ""
+      %p.tweet
+        Happy Holidays.
+        %br/
+        %span.tweet-date Dec. 22 at 10:15am
+      %p.tweet
+        Ima Tweet (and a Pirate!)
+        %br/
+        %span.tweet-date Dec. 22 at 10:15am
+      %p.tweet
+        Members don’t miss lunch tomorrow. Coco’s Italian Market!
+        %br/
+        %span.tweet-date Dec. 22 at 10:15am
+      %p.tweet
+        Mobile pros out there: How much are you working from your favorite 3rd places this week before the Xmas holiday?
+        %br/
+        %span.tweet-date Dec. 22 at 10:15am
+      %p.tweet
+        Members don’t miss lunch tomorrow. Coco’s Italian Market!
+        %br/
+        %span.tweet-date Dec. 22 at 10:15am
+    %h3.title-download Downloads
+    %a.button-download{:href => "#", :title => ""}
+      %span Document One
+    %a.button-download{:href => "#", :title => ""}
+      %span Document Two
+  / end twelve columns
+%h2.eye-catcher Punchy, quick text to draw the audience in immediately.
+%p
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan tincidunt eleifend.
+  Morbi ut orci et libero molestie accumsan nec vel lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Nulla accumsan tincidunt eleifend.
+.row
+  .six.columns.gray-box
+    %span.calendar This is a link for the calendar. Can you come?
+    %a.button-custom{:href => "#", :title => ""}
+      %span View the Calendar
+  .six.columns.gray-box
+    %span.meet-peep Meet our people. They are so friendly.
+    %a.button-custom{:href => "#", :title => ""}
+      %span Meet Our People
+.row
+  .twelve.columns
+    %h2.hm-article-title Services
+    #hm-article-entry
+      = image_tag "comment-triangle.png", :class => "comment-triangle", :alt => ""
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan tincidunt eleifend. Morbi ut orci et libero molestie accumsan nec vel lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan tincidunt eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan tincidunt eleifend. Morbi ut orci et libero molestie accumsan nec vel lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan tincidunt eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan tincidunt eleifend. Morbi ut orci et libero molestie accumsan nec vel lacus.
+      = image_tag "http://placehold.it/200x200.png", :alt => "", :class => "entry-img", :width => "200", :height => "200"
+      %ul
+        %li One
+        %li Two
+        %li Three
+        %li Four
+        %li Five
+        %li Six
+        %li Seven

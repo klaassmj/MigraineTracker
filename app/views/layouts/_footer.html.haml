@@ -1,0 +1,35 @@
+/ container
+#footer.container
+  .row
+    .two.columns
+      %h4 Company Name
+      %p
+        %a{:href => "mailto:info@company.com"} info@company.com
+        = succeed "123.456.7890" do
+          %br/
+      %a.button-custom{:href => "#"} Map It
+    .four.columns
+      %h4 Text Two
+      %p
+        Text block for column two to
+        share more about the organization
+        and what it’s all about. Text block
+        for column two to share more about
+        the organization and what it’s
+        all about.
+    .five.columns.text-right
+      %ul.nav-bar
+        %li
+          %a{:href => "#", :title => ""} About
+        %li
+          %a{:href => "#", :title => ""} Locations
+        %li
+          %a{:href => "#", :title => ""} Services
+        %li
+          %a{:href => "#", :title => ""} Benefits
+        %li
+          %a{:href => "#", :title => ""} Contact
+      %a.button-custom{:href => "#", :title => ""}
+        %span Important Notifications
+      %p.copyright Copyright © 2012 Company Name. All Rights Reserved.
+/ end container
