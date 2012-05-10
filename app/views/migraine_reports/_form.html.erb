@@ -20,7 +20,7 @@
   </div>
   <div class="field">
     <%= f.label :severity %><br />
-    <%= f.number_field :severity %>
+    <%= f.number_field :severity, :in => 1...10 %>
   </div>
   <div class="field">
     <%= f.label :location %><br />
