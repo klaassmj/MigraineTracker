@@ -16,7 +16,6 @@ end
 
 Given /^I have a lot of reports on Friday$/ do
   u = User.where(:email => "test@test.com")[0]
-  MigraineReport.new(:user => u, :start => DateTime.now).save!
   MigraineReport.new(:user => u, :start => DateTime.new(2012,5,11,12,5,6)).save!
   MigraineReport.new(:user => u, :start => DateTime.new(2012,5,11,12,5,6)).save!
   MigraineReport.new(:user => u, :start => DateTime.new(2012,5,4,12,5,6)).save!
@@ -28,7 +27,6 @@ end
 
 Given /^I have a lot of reports in May$/ do
   u = User.where(:email => "test@test.com")[0]
-  MigraineReport.new(:user => u, :start => DateTime.now).save!
   MigraineReport.new(:user => u, :start => DateTime.new(2012,5,11,12,5,6)).save!
   MigraineReport.new(:user => u, :start => DateTime.new(2012,5,11,12,5,6)).save!
   MigraineReport.new(:user => u, :start => DateTime.new(2012,5,4,12,5,6)).save!
